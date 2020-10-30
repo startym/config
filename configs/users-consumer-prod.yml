@@ -2,7 +2,7 @@ test:
   '{cipher}75953f1499343957162c5c703b9a4e62f32ac876588eed493874a30cd2d5fd30'
 
 server:
-  port: 8004
+  port: 8002
 
 spring:
   application:

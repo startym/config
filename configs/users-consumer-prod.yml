@@ -1,5 +1,5 @@
 test: 
-  '{cipher}75953f1499343957162c5c703b9a4e62f32ac876588eed493874a30cd2d5fd30'
+  '{cipher}b775770d0824de9148d4a9f203d9da4eecba7a6793b4edf02b2717b9e7ec0ac4'
 
 server:
   port: 8002

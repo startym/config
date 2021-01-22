@@ -13,3 +13,11 @@ eureka:
       defaultZone: http://eureka1.com:6001/eureka/ #,http://eureka2.com:6002/eureka/
     register-with-eureka: true
     fetch-registry: true
+
+management:
+  server:  
+    port: 7001
+  endpoints:
+    web:
+      exposure:
+        include: "*"

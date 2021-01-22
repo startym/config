@@ -1,4 +1,4 @@
-test: cfgtest111
+test: cfgtest123
 
 server:
   port: 7011

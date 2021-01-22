@@ -1,4 +1,4 @@
-test: cfgtest999
+test: '{cipher}15ecb2d052fcc5d100c9e0cc7322b2e7f4ebfac744e9fcabb0ea34e06d86c26f'
 
 server:
   port: 7011

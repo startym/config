@@ -11,6 +11,6 @@ eureka:
 
 zuul:
   routes:
-    usersprovider: /provider/*
+    usersprovider: /mmprovider/*
     usersconsumer: /consumer/*
   ignored-patterns: /**/mymap/**

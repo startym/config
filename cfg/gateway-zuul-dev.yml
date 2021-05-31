@@ -1,4 +1,4 @@
-test: 666888
+test: '{cipher}ed762b7e2cb69864435395baa761e2ae1e0f4c52badc177e35bc8668acd71487'
 server:
   port: 9001
   main:

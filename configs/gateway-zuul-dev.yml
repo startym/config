@@ -1,1 +1,16 @@
 test: 666888
+server:
+  port: 9002
+  main:
+    allow-bean-definition-overriding: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:123@127.0.0.1:6001/eureka/
+
+zuul:
+  routes:
+    usersprovider: /uprovider/*
+    usersconsumer: /uconsumer/*
+  ignored-patterns: /**/mymap/**

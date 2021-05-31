@@ -1,6 +1,6 @@
 test: 666888
 server:
-  port: 9002
+  port: 9001
   main:
     allow-bean-definition-overriding: true
 

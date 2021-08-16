@@ -1,16 +1,28 @@
-test: 666888
+test: test123
 server:
   port: 9001
-  main:
-    allow-bean-definition-overriding: true
+
+spring:
+  application:
+    name: gateway-zuul
+  zipkin:
+    base-url: http://127.0.0.1:9411/ 
+    sender:
+      type: web 
+    sleuth:
+      sampler:
+        probability: 0.5
 
 eureka:
   client:
     service-url:
-      defaultZone: http://admin:123@127.0.0.1:6001/eureka/
+      defaultZone: http://eureka1.com:6001/eureka   
 
 zuul:
   routes:
-    usersprovider: /mprovider/*
-    usersconsumer: /uconsumer/*
-  ignored-patterns: /**/mymap/**
+    users-provider: /usersprovider/*
+    users-consumer: /usersconsumer/*
+  prefix: /gateway                       #前缀
+  ignored-services: '*'                  #禁用服务名访问(内网不受该限制)
+  ignored-patterns: /**/mmap/**          #禁用某些路径
+

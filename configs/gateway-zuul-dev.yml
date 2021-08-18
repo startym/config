@@ -24,7 +24,7 @@ zuul:
     connection-request-timeout-millis: 10000
   AuthorityFilter:
     pre:
-      disable: true
+      disable: false
 
 
 ribbon:

@@ -1,4 +1,4 @@
-test: '{cipher}bd07464adf9a6e96065bb7fcfb5d641bad2dc6a2feca6671feb3e01cc8a0e378'
+test: '{cipher}a64ac30b91d068e61c6f7f29df5247adc830b6e38efde0643c94c6e4e89f7082'
 server:
   port: 9001
 

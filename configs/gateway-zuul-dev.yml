@@ -1,3 +1,4 @@
+test: test123
 server:
   port: 9001
 
@@ -21,6 +22,10 @@ zuul:
     connect-timeout-millis: 10000
     socket-timeout-millis: 10000
     connection-request-timeout-millis: 10000
+  AuthorityFilter:
+    pre:
+      disable: true
+
 
 ribbon:
   read-timeout: 9000    #请求处理的超时时间

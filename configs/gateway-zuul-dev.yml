@@ -1,4 +1,4 @@
-test: test4444
+test: '{cipher}bd07464adf9a6e96065bb7fcfb5d641bad2dc6a2feca6671feb3e01cc8a0e378'
 server:
   port: 9001
 
@@ -9,7 +9,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:6001/eureka/
+      defaultZone: '{cipher}f2bb9800bb29aa1b379bf1ffd05b77c28e1905ac706f081362bfdee1ca442b42406db2ae273d8a6847bf4a4e70631595' #http://127.0.0.1:6001/eureka/
 
 zuul:
   routes:

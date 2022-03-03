@@ -1,4 +1,4 @@
-test: test8888
+test: '{cipher}e9008f48acb81b5419b6b252d30f67907be89b72b1d0d3dcd46723629d1271b2'
 server:
   port: 9001
 spring:

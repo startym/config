@@ -1,16 +1,25 @@
-test: '{cipher}ed762b7e2cb69864435395baa761e2ae1e0f4c52badc177e35bc8668acd71487'
 server:
-  port: 9001
+  port: 9003
+spring:
+  application:
+    name: gateway-zuul
   main:
-    allow-bean-definition-overriding: true
+    allow-bean-definition-overriding: true #允许多个服务引用网关
 
 eureka:
   client:
     service-url:
-      defaultZone: http://admin:123@127.0.0.1:6001/eureka/
+      defaultZone: http://127.0.0.1:6001/eureka/
 
 zuul:
   routes:
-    usersprovider: /myprovider/*
-    usersconsumer: /consumer/*
-  ignored-patterns: /**/mymap/**
+    users-provider: /usersprovider/*
+    users-consumer: /usersconsumer/*
+  host:
+    socket-timeout-millis: 6000
+    connect-timeout-millis: 6000
+
+ribbon:
+  ReadTimeout: 9000    #请求处理的超时时间
+  SocketTimeout: 9000  #请求连接的超时时间
+  ConnectTimeout: 9000

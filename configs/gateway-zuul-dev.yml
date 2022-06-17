@@ -1,6 +1,6 @@
-test: '{cipher}e9008f48acb81b5419b6b252d30f67907be89b72b1d0d3dcd46723629d1271b2'
 server:
   port: 9001
+
 spring:
   application:
     name: gateway-zuul
@@ -13,14 +13,16 @@ eureka:
       defaultZone: http://127.0.0.1:6001/eureka/
 
 zuul:
+  prefix: /gateway
+  ignored-patterns: /**/cmap/**    		 #禁用某些路径
   routes:
-    users-provider: /usersprovider/*
-    users-consumer: /usersconsumer/*
+    user-provider: /userprovider/**
+    user-consumer: /userconsumer/**
+  AuthorityFilter:
+    pre:
+      disable: true
+
   host:
     socket-timeout-millis: 6000
     connect-timeout-millis: 6000
 
-ribbon:
-  ReadTimeout: 9000    #请求处理的超时时间
-  SocketTimeout: 9000  #请求连接的超时时间
-  ConnectTimeout: 9000

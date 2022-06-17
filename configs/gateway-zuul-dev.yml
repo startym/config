@@ -8,6 +8,14 @@ spring:
   main:
     allow-bean-definition-overriding: true #允许多个服务引用网关
 
+  zipkin:
+    base-url: http://127.0.0.1:9411/ #zipkin server的地址
+    sender:
+      type: web #请求方式,默认以http的方式向zipkin server发送追踪数据，其他取值如 kafka、rabbit
+  sleuth:
+    sampler:
+      probability: 0.5 #采样的百分比,默认为0.1，即10%
+
 eureka:
   client:
     service-url:

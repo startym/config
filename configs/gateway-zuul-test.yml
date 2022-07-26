@@ -14,11 +14,11 @@ eureka:
       defaultZone: http://127.0.0.1:6001/eureka/
 
 zuul:
-  prefix: /gateway
-  ignored-patterns: /**/cmap/**    		 #禁用某些路径
   routes:
     user-provider: /userprovider/**
     user-consumer: /userconsumer/**
+  prefix: /gateway
+  ignored-patterns: /**/mm/**
   AuthorityFilter:
     pre:
       disable: true

@@ -17,9 +17,6 @@ zuul:
   routes:
     user-provider: /userprovider/**
     user-consumer: /userconsumer/**
-  prefix: /gateway
-  ignored-patterns: /**/mm/**
-
   #禁用某个过滤器
   AuthorityFilter:
     pre:

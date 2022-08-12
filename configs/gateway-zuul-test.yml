@@ -1,4 +1,4 @@
-test: '{cipher}ac8208748ab147a959b5f9e642e4e6b0371bad1da1f107ad36b390ce2a2550f7'
+test: '{cipher}985656c423d60b5b9d7336041ccb03a361913742e5742be0f0b5cbf9b21a2df4'
 server:
   port: 9002
 

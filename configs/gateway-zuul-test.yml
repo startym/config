@@ -1,7 +1,6 @@
 test: '{cipher}985656c423d60b5b9d7336041ccb03a361913742e5742be0f0b5cbf9b21a2df4'
 server:
   port: 9002
-
 spring:
   application:
     name: gateway-zuul
@@ -13,17 +12,12 @@ eureka:
     service-url:
       defaultZone: http://admin:123@127.0.0.1:6001/eureka/
 
+#网关路由
 zuul:
   routes:
-    user-provider: /userprovider/**
-    user-consumer: /userconsumer/**
+    users-provider: /userprovider/**     #一个*只能匹配一层路径
+    users-consumer: /userconsumer/**     #rest风格必须写**
   prefix: /gateway
+  ignored-services: '*'                  #禁用服务名访问(内网不受该限制)
   ignored-patterns: /**/mm/**
-  AuthorityFilter:
-    pre:
-      disable: true
-
-  host:
-    socket-timeout-millis: 6000
-    connect-timeout-millis: 6000
 

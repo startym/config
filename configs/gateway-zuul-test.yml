@@ -1,4 +1,4 @@
-test: '{cipher}985656c423d60b5b9d7336041ccb03a361913742e5742be0f0b5cbf9b21a2df4'
+test: '{cipher}bce335d1b0db1e2d7dcc66b7b03b99cce4134ad5186bb3238a92ced97b07fbf7'
 server:
   port: 9002
 spring:

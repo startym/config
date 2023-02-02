@@ -1,4 +1,4 @@
-test: test123
+test: test777
 server:
   port: 9001
 spring:
